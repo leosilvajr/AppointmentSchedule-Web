@@ -1,11 +1,18 @@
 import "./login.css"
 import logo from "../../assets/logo.png";
-import fundo from "../../assets/fundo.png";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
-    return <div className="row">
 
-        <div className="col-sm-5 d-flex justify-content-center align-items-center text-center">
+    const navigate = useNavigate();
+
+    function ExecuteLogin() {
+        navigate("/appointments");
+    }
+
+    return <div className="container vh-100 d-flex justify-content-center align-items-center">
+
+        <div className="col-sm-12 d-flex justify-content-center align-items-center text-center">
             <form className="form-login">
                 <img src={logo} className="logo mb-4"/>
                 <h5 className="mb-5">Gerencie seus agendamentos de forma simples.</h5>
@@ -20,21 +27,16 @@ function Login() {
                 </div>
 
                 <div className="mt-3 mb-5">
-                    <button className="btn btn-success w-100">Entrar</button>
+                    <button onClick={ExecuteLogin} className="btn btn-success w-100" type="button">Entrar</button>
                 </div>
 
                 <div>
                     <span className="me-1">Não tenho uma conta.</span>
-                    <a href="#">Criar agora</a>
+                    <Link to="/register">Criar agora</Link>
                 </div>
 
             </form>
         </div>
-
-        <div className="col-sm-7 d-flex">
-            <img src={fundo} className="background-login"/>
-        </div>
-
     </div>
 }
 
