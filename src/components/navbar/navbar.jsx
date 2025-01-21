@@ -27,7 +27,7 @@ function Navbar() {
           <li className="nav-item">
             <div className="dropdown">
               <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Usuário
+                Perfil
               </button>
               <ul className="dropdown-menu dropdown-menu-end">
                 <li><Link className="dropdown-item" to="#">Meu Perfil</Link></li>
