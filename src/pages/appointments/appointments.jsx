@@ -3,7 +3,7 @@ import Navbar from "../../components/navbar/navbar"
 function Appointments() {
     return <>
         <Navbar/>
-        <h1>Agendamentos</h1>
+        <h1>Agendar Consulta</h1>
     </>
     
 }
